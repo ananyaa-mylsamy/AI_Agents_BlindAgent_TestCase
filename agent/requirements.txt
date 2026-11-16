@@ -1,0 +1,4 @@
+# Pinned so every run uses the same harness. 0.13.14 is the last release of the
+# action-based API (custom actions, allowed_domains, Tools.act); 1.0 is a rewrite.
+browser-use==0.13.14
+playwright==1.65.2

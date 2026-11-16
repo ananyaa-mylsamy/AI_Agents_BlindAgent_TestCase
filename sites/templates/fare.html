@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Choose a fare{% endblock %}
+{% block content %}
+<h1>Choose a fare</h1>
+<p>{{ flight.airline }} &middot; {{ flight.depart }} &ndash; {{ flight.arrive }} &middot; {{ s.date_label }}
+ &middot; {% if flight.stops == 0 %}Nonstop{% else %}{{ flight.stops }} stop ({{ flight.via }}){% endif %}</p>
+<form action="/fare" method="post">
+<div class="fares">
+  <div class="fare">
+    <h2>Basic</h2>
+    <p class="price">${{ flight.price }}</p>
+    <p class="muted">Restrictions apply.</p>
+    <button type="submit" name="fare" value="basic">Select Basic</button>
+  </div>
+  <div class="fare">
+    <h2>Main</h2>
+    <p class="price">${{ flight.price + upgrade }}</p>
+    <p class="muted">Changes allowed. Choose your seat.</p>
+    <button type="submit" name="fare" value="main">Select Main</button>
+  </div>
+</div>
+</form>
+{% endblock %}

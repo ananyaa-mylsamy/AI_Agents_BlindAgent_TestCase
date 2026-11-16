@@ -1,0 +1,1 @@
+I’m at checkout for the selected flight:  - **Route:** Boston (BOS) → Portland (PDX) - **Date:** Friday, November 20, 2026 - **Passenger:** 1 adult - **Flight:** Skyhop, 8:40 AM–2:55 PM - **Stops:** 1, at MSP - **Fare:** Basic - **Total:** $347  No payment has been made, and the passenger fields are blank. I’ll wait for your passenger details.

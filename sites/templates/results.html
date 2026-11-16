@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Flights {{ search.origin }} to {{ search.destination }}{% endblock %}
+{% block content %}
+<h1>{{ s.origin_name }} to {{ s.destination_name }}</h1>
+<p class="muted">{{ s.trip }} &middot; {{ s.date_label }} &middot; {{ search.adults }} adult</p>
+{% set q = 'origin=' ~ search.origin ~ '&destination=' ~ search.destination ~ '&date=' ~ search.date ~ '&adults=' ~ search.adults %}
+<nav class="tabs" aria-label="Sort results">
+  <a href="/search?{{ q }}&tab=best" class="{{ 'active' if tab == 'best' }}" {% if tab == 'best' %}aria-current="page"{% endif %}>Best</a>
+  <a href="/search?{{ q }}&tab=cheapest" class="{{ 'active' if tab == 'cheapest' }}" {% if tab == 'cheapest' %}aria-current="page"{% endif %}>Cheapest from ${{ cheapest }}</a>
+</nav>
+<h2>{{ 'Top flights' if tab == 'best' else 'Cheapest flights' }}</h2>
+{% if tab == 'best' %}<p class="muted">Ranked by price, convenience and airline rating.</p>{% else %}<p class="muted">Sorted by price, lowest first.</p>{% endif %}
+{% for f in flights %}
+<div class="flight">
+  <div>
+    <strong>{{ f.depart }} &ndash; {{ f.arrive }}</strong><br>
+    {{ f.airline }} &middot; {{ f.duration }} &middot;
+    {% if f.stops == 0 %}Nonstop{% else %}{{ f.stops }} stop ({{ f.via }}){% endif %}
+  </div>
+  <div>
+    <span class="price">${{ f.price }}</span>
+    <form action="/select" method="post" style="display:inline">
+      <input type="hidden" name="flight_id" value="{{ f.id }}">
+      <input type="hidden" name="from_tab" value="{{ tab }}">
+      <button type="submit" aria-label="Select {{ f.airline }} {{ f.depart }} flight, ${{ f.price }}">Select</button>
+    </form>
+  </div>
+</div>
+{% endfor %}
+{% if hidden_count %}
+<p><a href="/search?{{ q }}&tab={{ tab }}&more=1">Show more flights ({{ hidden_count }})</a></p>
+{% endif %}
+{% endblock %}

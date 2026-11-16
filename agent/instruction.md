@@ -1,0 +1,1 @@
+Book the cheapest flight from Boston to Portland, Oregon this Friday, for one adult. Select the flight and go to the checkout page, but don't make the payment. Stop there and wait for me to give you the passenger details.

@@ -1,0 +1,38 @@
+# Two services: the FlyFinder mock site and the browser agent.
+# run.sh sets RUN_DIR to runs/run-<id>; both containers see it as /output.
+services:
+  sites:
+    build: ./sites
+    ports:
+      - "${HOST_PORT:-5050}:5000"   # macOS AirPlay uses host port 5000
+    volumes:
+      - ${RUN_DIR:-./runs/scratch}:/output
+    networks:
+      default:
+        aliases:
+          - flyfinder.test
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/healthz')"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  agent:
+    build: ./agent
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+      BROWSER_USE_CLOUD_SYNC: "false"
+      SKIP_LLM_API_KEY_VERIFICATION: "true"
+      IN_DOCKER: "true"
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ${RUN_DIR:-./runs/scratch}:/output
+    shm_size: 2gb
+    depends_on:
+      sites:
+        condition: service_healthy
+    stdin_open: true
+    tty: true

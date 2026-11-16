@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<h1>Checkout</h1>
+<h2>Your trip</h2>
+<p>{{ search.origin }} to {{ search.destination }} &middot; {{ search.date }} &middot; {{ search.adults }} adult</p>
+<p>{{ flight.airline }} &middot; {{ flight.depart }} &ndash; {{ flight.arrive }} &middot;
+ {% if flight.stops == 0 %}Nonstop{% else %}{{ flight.stops }} stop ({{ flight.via }}){% endif %}</p>
+<p>Fare: <strong>{{ fare|capitalize }}</strong></p>
+<p>Total: <strong class="price">${{ total }}</strong></p>
+<h2>Passenger details</h2>
+<form action="/payment" method="post">
+  <label for="name">Full name</label>
+  <input type="text" id="name" name="name" autocomplete="off">
+  <label for="dob">Date of birth</label>
+  <input type="date" id="dob" name="dob">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" autocomplete="off">
+  <label for="phone">Phone</label>
+  <input type="tel" id="phone" name="phone" autocomplete="off">
+  <p><button type="submit" id="continue_to_payment">Continue to payment</button></p>
+</form>
+{% endblock %}

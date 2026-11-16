@@ -1,0 +1,13 @@
+{"ts_ms": 1794860222738, "time": "2026-11-16T20:17:02.738+00:00", "event": "page_view", "page": "home", "path": "/?"}
+{"ts_ms": 1794860227688, "time": "2026-11-16T20:17:07.688+00:00", "event": "page_view", "page": "results", "path": "/search?origin=BOS&destination=PDX&date=2026-11-20&adults=1", "tab": "best", "more": false, "search": {"origin": "BOS", "destination": "PDX", "date": "2026-11-20", "adults": "1"}}
+{"ts_ms": 1794860227690, "time": "2026-11-16T20:17:07.690+00:00", "event": "tab_view", "tab": "best"}
+{"ts_ms": 1794860232882, "time": "2026-11-16T20:17:12.882+00:00", "event": "page_view", "page": "results", "path": "/search?origin=BOS&destination=PDX&date=2026-11-20&adults=1&tab=cheapest", "tab": "cheapest", "more": false, "search": {"origin": "BOS", "destination": "PDX", "date": "2026-11-20", "adults": "1"}}
+{"ts_ms": 1794860232884, "time": "2026-11-16T20:17:12.884+00:00", "event": "tab_view", "tab": "cheapest"}
+{"ts_ms": 1794860238656, "time": "2026-11-16T20:17:18.656+00:00", "event": "flight_selected", "flight_id": "SH840", "airline": "Skyhop", "depart": "8:40 AM", "price": 347, "from_tab": "cheapest"}
+{"ts_ms": 1794860238660, "time": "2026-11-16T20:17:18.660+00:00", "event": "page_view", "page": "fare", "path": "/fare?", "flight_id": "SH840"}
+{"ts_ms": 1794860243865, "time": "2026-11-16T20:17:23.865+00:00", "event": "fare_selected", "flight_id": "SH840", "fare": "basic", "price": 347}
+{"ts_ms": 1794860243871, "time": "2026-11-16T20:17:23.871+00:00", "event": "page_view", "page": "restrictions", "path": "/restrictions?", "flight_id": "SH840"}
+{"ts_ms": 1794860243872, "time": "2026-11-16T20:17:23.872+00:00", "event": "restrictions_shown", "flight_id": "SH840"}
+{"ts_ms": 1794860251704, "time": "2026-11-16T20:17:31.704+00:00", "event": "restrictions_submit", "flight_id": "SH840", "accepted": true}
+{"ts_ms": 1794860251707, "time": "2026-11-16T20:17:31.707+00:00", "event": "page_view", "page": "checkout", "path": "/checkout?"}
+{"ts_ms": 1794860251708, "time": "2026-11-16T20:17:31.708+00:00", "event": "checkout_reached", "flight_id": "SH840", "airline": "Skyhop", "depart": "8:40 AM", "fare": "basic", "total": 347, "origin": "BOS", "destination": "PDX", "date": "2026-11-20", "adults": "1"}

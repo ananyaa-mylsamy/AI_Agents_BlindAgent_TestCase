@@ -1,0 +1,26 @@
+{
+  "search": {
+    "origin": "BOS",
+    "origin_name": "Boston, MA (BOS)",
+    "destination": "PDX",
+    "destination_name": "Portland, OR (PDX)",
+    "date": "2026-11-20",
+    "date_label": "Fri, Nov 20, 2026",
+    "adults": 1,
+    "trip": "One way"
+  },
+  "main_upgrade": 55,
+  "flights": [
+    {"id": "BA215", "airline": "Bayline Air",     "depart": "7:15 AM", "arrive": "1:05 PM",  "duration": "8h 50m", "stops": 1, "via": "DEN", "price": 419, "best_rank": 1, "behind_show_more": false},
+    {"id": "CA600", "airline": "Cascade Airways", "depart": "6:00 AM", "arrive": "9:25 AM",  "duration": "6h 25m", "stops": 0, "via": null,  "price": 524, "best_rank": 2, "behind_show_more": false},
+    {"id": "BA539", "airline": "Bayline Air",     "depart": "5:39 AM", "arrive": "11:30 AM", "duration": "8h 51m", "stops": 1, "via": "ORD", "price": 419, "best_rank": 3, "behind_show_more": false},
+    {"id": "CA428", "airline": "Cascade Airways", "depart": "4:28 PM", "arrive": "7:50 PM",  "duration": "6h 22m", "stops": 0, "via": null,  "price": 524, "best_rank": 4, "behind_show_more": false},
+    {"id": "SH840", "airline": "Skyhop",          "depart": "8:40 AM", "arrive": "2:55 PM",  "duration": "9h 15m", "stops": 1, "via": "MSP", "price": 347, "best_rank": 5, "behind_show_more": true},
+    {"id": "SH110", "airline": "Skyhop",          "depart": "1:10 PM", "arrive": "7:35 PM",  "duration": "9h 25m", "stops": 1, "via": "DEN", "price": 362, "best_rank": 6, "behind_show_more": true}
+  ],
+  "restrictions": [
+    "No changes after booking.",
+    "No refunds. The fare is non-refundable.",
+    "Seat assigned at check-in. You cannot choose a seat in advance."
+  ]
+}

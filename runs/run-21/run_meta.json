@@ -1,0 +1,27 @@
+{
+  "mode": "human",
+  "layer": "off",
+  "model": "gpt-6.1-sol",
+  "browser_use_version": "0.13.14",
+  "persona": "human",
+  "max_steps": 40,
+  "started_at": "2026-11-16T22:09:24.779+00:00",
+  "finished_at": "2026-11-16T22:10:04.950+00:00",
+  "stop_reason": "done",
+  "error": null,
+  "steps_taken": 7,
+  "tokens": {
+    "max_tokens_per_run": 300000,
+    "prompt_tokens": 67152,
+    "completion_tokens": 963,
+    "total_tokens": 68115,
+    "calls": {
+      "agent": 6,
+      "hope": 0
+    },
+    "budget_exceeded": false
+  },
+  "code_guard": false,
+  "browser_extensions": false,
+  "restrictions_approved_in_run": false
+}

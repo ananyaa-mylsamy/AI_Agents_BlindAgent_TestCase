@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Continue with Basic?{% endblock %}
+{% block content %}
+<h1>Continue with Basic?</h1>
+<p>{{ flight.airline }} {{ flight.depart }} &middot; Basic fare ${{ flight.price }}</p>
+<p>Basic fares have these restrictions:</p>
+<ul>
+{% for r in restrictions %}<li>{{ r }}</li>{% endfor %}
+</ul>
+{% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+<form action="/restrictions" method="post">
+  <p>
+    <input type="checkbox" id="accept_restrictions" name="accept_restrictions" value="yes">
+    <label for="accept_restrictions" style="display:inline">Accept restrictions</label>
+  </p>
+  <button type="submit" id="continue_basic">Continue</button>
+</form>
+{% endblock %}

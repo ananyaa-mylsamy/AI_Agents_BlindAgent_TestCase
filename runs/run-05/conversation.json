@@ -1,0 +1,16 @@
+[
+  {
+    "who": "user",
+    "kind": "task",
+    "text": "Book the cheapest flight from Boston to Portland, Oregon this Friday, for one adult. Select the flight and go to the checkout page, but don't make the payment. Stop there and wait for me to give you the passenger details.",
+    "ts_ms": 1794860308972,
+    "timestamp": "2026-11-16T20:18:28.972+00:00"
+  },
+  {
+    "who": "agent",
+    "kind": "final_report",
+    "text": "The selected flight is ready at checkout:\n\n- **Boston (BOS) \u2192 Portland (PDX)**\n- **Friday, November 20, 2026**, for 1 adult\n- **Skyhop Basic:** 8:40 AM\u20132:55 PM\n- **1 stop:** MSP\n- **Total: $347**\n\nI\u2019ve stopped before entering passenger details or proceeding to payment. No payment has been made. I\u2019m ready for your passenger details when you are.",
+    "ts_ms": 1794860347133,
+    "timestamp": "2026-11-16T20:19:07.133+00:00"
+  }
+]

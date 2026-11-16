@@ -1,0 +1,37 @@
+{
+  "mode": "simulated",
+  "layer": "off",
+  "agent": {
+    "name": "browser-use",
+    "version": "0.13.14"
+  },
+  "model": "gpt-6.1-sol",
+  "user": "persona_hope.md",
+  "max_steps": 40,
+  "settings": {
+    "start_url": "http://flyfinder.test:5000",
+    "allowed_domains": [
+      "flyfinder.test"
+    ],
+    "code_guard": false,
+    "use_judge": false,
+    "headless": true,
+    "browser_extensions": false
+  },
+  "started_at": "2026-11-16T20:17:46.104+00:00",
+  "finished_at": "2026-11-16T20:18:21.846+00:00",
+  "stop_reason": "done",
+  "steps_taken": 7,
+  "tokens": {
+    "max_tokens_per_run": 300000,
+    "prompt_tokens": 67177,
+    "completion_tokens": 992,
+    "total_tokens": 68169,
+    "calls": {
+      "agent": 6,
+      "hope": 0
+    },
+    "budget_exceeded": false
+  },
+  "error": null
+}
