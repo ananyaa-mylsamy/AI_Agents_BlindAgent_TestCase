@@ -2,7 +2,7 @@
 
 Created by: Ananyaa Mylsamy · Tested (video) by: Steffi Roy
 
-Setup and run commands are in [instructions.md](instructions.md). This document covers what the case tests, why, and how.
+Setup and run commands are in [README.md](README.md). This document covers what the case tests, why, and how.
 
 ## 1. Target control breakdowns
 
